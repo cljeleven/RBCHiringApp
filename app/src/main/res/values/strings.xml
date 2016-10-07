@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RBCHiringApp</string>
+    <string name="hint_search">search restaurant</string>
+    <string name="hint_search_place">search place</string>
+
+
+    <string-array name="sort_options">
+        <item>best_match</item>
+        <item>rating</item>
+        <item>review_count</item>
+        <item>distance</item>
+    </string-array>
+
+
+</resources>

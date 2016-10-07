@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:id="@+id/mainlist_cell_layout"
+    >
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_tune_white_24dp"
+        android:id="@+id/mainlist_cell_restaurant_img"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="mcdonalds"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:id="@+id/mainlist_cell_restaurant_name"
+        android:layout_toRightOf="@id/mainlist_cell_restaurant_img"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="asdfasdfasdf"
+        android:textSize="15sp"
+
+        android:layout_toRightOf="@id/mainlist_cell_restaurant_img"
+        android:layout_below="@id/mainlist_cell_restaurant_name"
+        android:id="@+id/mainlist_cell_restaurant_rate"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="asdfasdfasdf"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/mainlist_cell_restaurant_img"
+        android:layout_below="@id/mainlist_cell_restaurant_rate"
+        android:id="@+id/mainlist_cell_restaurant_price"
+        />
+
+</RelativeLayout>

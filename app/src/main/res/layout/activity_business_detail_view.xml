@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BusinessDetail.BusinessDetailActivity"
+    android:gravity="center_horizontal"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
+        app:theme="@style/myToolbarStyle"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/bussiness_detail_headImg"
+        android:layout_below="@+id/my_detail_toolbar"
+        android:src="@drawable/ic_launcher"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textSize="22sp"
+        android:textColor="@color/darkerblue"
+        android:layout_below="@id/bussiness_detail_headImg"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bussiness_detail_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$$"
+        android:textSize="20sp"
+        android:layout_below="@id/bussiness_detail_name"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bussiness_detail_price"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating: 4"
+        android:textSize="20sp"
+        android:layout_below="@+id/bussiness_detail_price"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bussiness_detail_rating"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Category: America"
+        android:layout_below="@+id/bussiness_detail_rating"
+        android:id="@+id/bussiness_detail_category"
+        android:layout_centerHorizontal="true"/>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/bussiness_detail_category"
+        android:id="@+id/bussiness_detail_viewpager">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>
