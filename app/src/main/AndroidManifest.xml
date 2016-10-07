@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".BusinessList.MainActivity"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:label="RBC Yelp project">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

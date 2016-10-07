@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle("RBC Yelp project");
+
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
         mpresenter = new MainPresenter(this,this, new MainModel());
 
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -74,7 +77,16 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
         nameET = (EditText) popupsearchview.findViewById(R.id.searchview_search_restaurant);
         locationET = (EditText) popupsearchview.findViewById(R.id.searchview_search_location);
         searchBtn = (Button)popupsearchview.findViewById(R.id.searchview_search_btn);
-
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = (nameET.getText().toString().length()>0)?nameET.getText().toString():"";
+                String location = (locationET.getText().toString().length()>0)?locationET.getText().toString():"Toronto";
+                mpresenter.searchresult(name,location);
+                searchwindow.dismiss();
+                //    Toast.makeText(MainActivity.this,"searching " + name+" at "+location ,Toast.LENGTH_LONG).show();
+            }
+        });
         categorize_checkbox = (CheckBox)popupsearchview.findViewById(R.id.search_categorize_checkbox);
 
         filtersetbtn = (Button) popupfilterview.findViewById(R.id.filter_set_btn);
@@ -160,15 +172,7 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
         int id = item.getItemId();
         switch (id){
             case R.id.menu_search_item:
-                searchBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        String name = (nameET.getText().toString().length()>0)?nameET.getText().toString():"";
-                        String location = (locationET.getText().toString().length()>0)?locationET.getText().toString():"Toronto";
-                        mpresenter.searchresult(name,location);
-                    //    Toast.makeText(MainActivity.this,"searching " + name+" at "+location ,Toast.LENGTH_LONG).show();
-                    }
-                });
+
                 if(searchwindow==null) {
                     searchwindow = new PopupWindow(popupsearchview, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, true);
                 }

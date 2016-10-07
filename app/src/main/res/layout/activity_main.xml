@@ -14,39 +14,11 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
+        app:theme="@style/myToolbarStyle"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp"
-            android:gravity="center_vertical"
-            android:descendantFocusability="beforeDescendants"
-            android:focusableInTouchMode="true">
-            <!--<EditText-->
-                <!--android:imeOptions="actionSearch"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_toLeftOf="@+id/activity_filter_icon"-->
-                <!--android:textSize="15sp"-->
-                <!--android:singleLine="true"-->
-                <!--android:id="@+id/activity_search_search_field"-->
-                <!--style="@style/edittext_style_white"-->
-                <!--/>-->
-
-
-            <!--<ImageView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:src="@drawable/ic_tune_white_24dp"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:id="@+id/activity_filter_icon"-->
-                <!--/>-->
-
-
-        </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
 

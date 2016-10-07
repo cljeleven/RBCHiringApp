@@ -30,11 +30,10 @@ public class MainlistAdapter_cat extends RecyclerView.Adapter<RecyclerView.ViewH
     List<Business> businessList;
 
     List<categorized_business> cblist;
-    MainViewInterface mainViewInterface;
     Context context;
     MainPresenterInterface mainPresenterInterface;
     private Map<Category, List<Integer>> map;
-    Map<Integer,Category> categoryMap = new HashMap<Integer, Category>();
+
     final int TYPE_CATEGORY = 0;
     final int TYPE_BUSINESS = 1;
 
@@ -74,7 +73,7 @@ public class MainlistAdapter_cat extends RecyclerView.Adapter<RecyclerView.ViewH
                 final Category category = cblist.get(position).getCategory();
                 int num = cblist.get(position).getCategory_size();
                 if(category!=null&&num!=0){
-                    vhc.category.setText(category.getTitle()+" "+num);
+                    vhc.category.setText(category.getTitle()+" ("+num+")");
                 }
                 break;
 

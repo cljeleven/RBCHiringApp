@@ -40,6 +40,7 @@ public class BusinessDetailActivity extends AppCompatActivity implements Busines
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         businessImg = (ImageView) findViewById(R.id.bussiness_detail_headImg);
         business_price = (TextView) findViewById(R.id.bussiness_detail_price);
         business_rating = (TextView) findViewById(R.id.bussiness_detail_rating);
@@ -63,6 +64,7 @@ public class BusinessDetailActivity extends AppCompatActivity implements Busines
             }
             category = category.substring(0,category.length()-1);
             business_category.setText(category);
+            getSupportActionBar().setTitle(business.getName());
         }
 
 
